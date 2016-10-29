@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Default HTML</title>
-  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="css/aboutUs.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -11,14 +12,171 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
 <body>
-  <header>
 
+  <!-- header navigation -->
+  <header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" id="logo" class="navbar-brand">7team</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="../article/articleList.html">Article</a></li>
+            <li><a href="../board/boardList.html">board</a></li>
+            <li><a href="../qna/qnaList.html">QnA</a></li>
+            <li><a href="../login/signup.html">SignUp</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login/login.html"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
+
   <section>
+    <!-- member section -->
+    <div class="container text-center" id="member">
+      <h3>THE 7TEAM</h3>
+      <p><em>WE LOVE BITCOIN &amp; Programming</em></p>
+      <p>우리는 비트코인 투자 정보를 제공합니다</p>
+      <br>
+
+      <!-- 6 member part -->
+      <div class="row">
+
+        <!-- first memgber -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Choi Won Jae</strong>
+          </p>
+          <br>
+          <a href="#memberInfo1" data-toggle="collapse">
+            <img src="img/choi.png" class="img-circle person" alt="최원재" width="255" height="255">
+          </a>
+          <div id="memberInfo1" class="collapse">
+            <h4 class="position">Project Manager</h4>
+            <p>Planning and Frontend</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>MongoDB + Express.js + Angular.js + Node.js</p>
+          </div>
+        </div>
+
+        <!-- second member -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Kim Won Tae</strong>
+          </p>
+          <br>
+          <a href="#memberInfo2" data-toggle="collapse">
+            <img src="img/kim.jpg" class="img-circle person" alt="김원태" width="255" height="255">
+          </a>
+          <div id="memberInfo2" class="collapse">
+            <h4 class="position">Architector</h4>
+            <p>Software Engineer and DB Modeler</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>AWS + DB Management</p>
+          </div>
+        </div>
+
+        <!-- third member -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Park Sung Yong</strong>
+          </p>
+          <br>
+          <a href="#memberInfo3" data-toggle="collapse">
+            <img src="img/park.jpg" class="img-circle person" alt="박성용" width="255" height="255">
+          </a>
+          <div id="memberInfo3" class="collapse">
+            <h4 class="position">UI/UX Designer &amp; Web Data Analyst</h4>
+            <p>Planning and Frontend</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>AWS + UI/UX Design + D3.js</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="container text-center">
+      <div class="row">
+        <!-- fourth member -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Jo Hyun Woo</strong>
+          </p>
+          <br>
+          <a href="#memberInfo4" data-toggle="collapse">
+            <!-- 조현우 사진 넣어야 함 -->
+            <img src="img/jo.jpg" class="img-circle person" alt="조현우" width="255" height="255">
+          </a>
+          <div id="memberInfo4" class="collapse">
+            <h4 class="position">Scrum Master</h4>
+            <p>manage a scrum team</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>AWS + Trello</p>
+          </div>
+        </div>
+
+        <!-- fifth member -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Um Youn Gil</strong>
+          </p>
+          <br>
+          <a href="#memberInfo5" data-toggle="collapse">
+            <img src="img/um.jpg" class="img-circle person" alt="엄윤길" width="255" height="255">
+          </a>
+          <div id="memberInfo5" class="collapse">
+            <h4 class="position">Developer</h4>
+            <p>develop backend side</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>jQuery + Node.js</p>
+          </div>
+        </div>
+
+        <!-- sixth member -->
+        <div class="col-sm-4">
+          <p class="text-center name">
+            <strong>Lee Sung Ju</strong>
+          </p>
+          <br>
+          <a href="#memberInfo6" data-toggle="collapse">
+            <img src="img/lee.jpg" class="img-circle person" alt="이성주" width="255" height="255">
+          </a>
+          <div id="memberInfo6" class="collapse">
+            <h4 class="position">Developer</h4>
+            <p>develop backend side</p>
+            <h5 class="skills">Skills</h5>
+            <p>Java + Spring + MyBatis + JSP</p>
+            <p>jQuery + Node.js</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </section>
-  <footer>
 
+  <!-- footer -->
+  <footer class="container-fluid text-center">
+    <p>Copyright &copy; 2016 <strong> Kosta 136th 7team</strong> ALL RESERVED</p>
   </footer>
+
 </body>
 </html>
