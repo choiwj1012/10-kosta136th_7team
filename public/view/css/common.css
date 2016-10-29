@@ -20,8 +20,8 @@
   font-size : 100px;
 }
 
-footer{
-  background-color : #f2f2f2;
-  margin-top : 20px;
-  padding : 25px;
+#footer {
+    background-color: #000;
+    color: #4BF;
+    padding: 20px 0;
 }
