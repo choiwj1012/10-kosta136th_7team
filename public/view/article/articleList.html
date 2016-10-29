@@ -2,8 +2,8 @@
 <html lang="ko" ng-app>
 <head>
   <meta charset="UTF-8">
-  <title>Default HTML</title>
-  <link rel="stylesheet" href="css/common.css">
+  <title>articleList HTML</title>
+  <link rel="stylesheet" href="css/article.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -15,7 +15,46 @@
 
   </header>
   <section>
+	<div class="jumbotron text-center">
+		<h1>Article List page</h1>
+		<p>자유로운 대화가 오가는 게시판</p>
+	</div>
+	<div class="container">
 
+		<span id="span-left">Total :1</span>
+		<span id="span_right">page :1</span>
+		<hr>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Select</th>
+					<th>Number</th>
+					<th>Title</th>
+					<th>Writer</th>
+					<th>ReadCount</th>
+				</tr>
+			</thead>
+		</table>
+		<div class="container text-center">
+			
+			<input type="button" id="delete_btn" value="삭제" />
+
+			<ul class="pagination pagination-lg pager">
+				<li><a href="#">Previous</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+			<input type="button" id="write_btn" value="글쓰기"/>
+		</div>
+		<div class="container text-center">
+			<input type="text" />
+			<input type="button" id="search_btn" value="검색"/>
+		</div>
+	</div>
   </section>
   <footer>
 
