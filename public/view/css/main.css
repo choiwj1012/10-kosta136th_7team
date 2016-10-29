@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* font */
+@import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
+
+/* logo style */
+#logo{
+  font-family : 'Permanent Marker', cursive;
+  font-size : 30px;
+  color: #fff;
+  margin: 0 auto;
+}
