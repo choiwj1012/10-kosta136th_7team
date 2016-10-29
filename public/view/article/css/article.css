@@ -16,7 +16,11 @@
   	float : right;
 }
 
-.jumbotron{
+#selectspan_right {
+	float : right;
+}
+
+#Listjumbotron{
 	background: url('../img/test.jpg') no-repeat;
 	background-size : 100%;
 }
@@ -45,4 +49,16 @@
 
 #writeview {
 	 opacity: 0.5;
+}
+
+#update_btn{
+	float : right;
+}
+
+#delete_btn{
+	float : right;
+}
+
+#Listreturn_btn{
+	float : right;
 }
