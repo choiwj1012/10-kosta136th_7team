@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#span_left {
+	float : left;
+}
+
+#span_right {
+  	float : right;
+}
+
+#delete_btn {
+  	float : left;
+}
+
+#write_btn {
+  	float : right;
+}
+
+.jumbotron{
+	background: url('../ img/test.jpg') no-repeat;
+	background-size : 100%;
+}
+  	
