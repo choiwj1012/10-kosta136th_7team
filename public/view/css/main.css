@@ -3,10 +3,16 @@
 /* font */
 @import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
 
-/* logo style */
-#logo{
-  font-family : 'Permanent Marker', cursive;
-  font-size : 30px;
-  color: #fff;
-  margin: 0 auto;
+.carousel-inner img{
+  width:100%;
+  margin:auto;
+  min-height: 200px;
+  max-height: 600px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width:600px){
+  .carousel-caption{
+    display:none;
+  }
 }
