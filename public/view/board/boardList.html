@@ -1,24 +1,208 @@
 <!DOCTYPE html>
 <html lang="ko" ng-app>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Default HTML</title>
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <meta charset="UTF-8">
+   <title>Default HTML</title>
+   <link rel="stylesheet" href="css/common.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+   <link rel="stylesheet" href="css/board.css">
+
+
 </head>
+
 <body>
-  <header>
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+            <a href="../index.html" class="navbar-brand">BitCoin</a>
+         </div>
+         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+               <li><a href="skills.html">Board</a></li>
+               <li><a href="gallery.html">Article</a></li>
+               <li><a href="board.html">Board</a></li>
+               <li><a href="shop.html">Q&A</a></li>
+               <li><a href="join.html">Join</a></li>
+               <li><a href="login.html">Login</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
 
-  </header>
-  <section>
 
-  </section>
-  <footer>
 
-  </footer>
+   <header>
+
+         <h1>BitCoin</h1>
+         <p>Welcome to BitCoin World</p>
+
+   </header>
+
+
+   <!-- 페이지 타이틀 -->
+   <section>
+
+   </section>
+
+
+
+
+
+   <div class="container-fluid text-center" id="first_section">
+      <div class="row content">
+
+         <!-- left side navigation -->
+         <div class="col-sm-2 sidenav">
+            <p><a href="#first_article" type="button" class="btn btn-collapse" data-toggle="link" data-target="#first_article">first_article <span class="badge">15</span></a></p>
+            <p><a href="#secend_article" type="button" class="btn btn-collapse" data-toggle="link" data-target="#secend_article">secend_article<span class="badge">0</span></a></p>
+            <p><a href="#third_article" type="button" class="btn btn-collapse" data-toggle="link" data-target="#third_article">third_article<span class="badge">0</span></a></p>
+         </div>
+
+         <!-- center side article -->
+         <div class="col-sm-8 text-left" id="first_article">
+            <br>
+            <h1>Welcome Free Board</h1>
+            <br>
+            <table class="table table-bordered table-hover">
+               <thead>
+                  <tr>
+                     <th>글번호</th>
+                     <th>글내용</th>
+                     <th>작성자</th>
+                     <th>작성일</th>
+                     <th>조회수</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                <td>1</td>
+                <td><a href="board_read.html">첫글임당</a></td>
+                <td><a href="board_read.html">박성용</a></td>
+                <td><a href="board_read.html">2016-10-09</a></td>
+                <td><a href="board_read.html">102</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="board_read.html">두 번째 글임당</a></td>
+                <td><a href="board_read.html">조현우</a></td>
+                <td><a href="board_read.html">2016-10-09</a></td>
+                <td><a href="board_read.html">102</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="board_read.html">세 번째 글임당</a></td>
+                <td><a href="board_read.html">박성용</a></td>
+                <td><a href="board_read.html">2016-10-09</a></td>
+                <td><a href="board_read.html">102</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><a href="board_read.html">네 번째 글임당</a></td>
+                <td><a href="board_read.html">김권식</a></td>
+                <td><a href="board_read.html">2016-10-09</a></td>
+                <td><a href="board_read.html">102</a></td>
+              </tr>
+               </tbody>
+            </table>
+
+            <!-- pagination -->
+            <div class="row text-center">
+               <button class="btn btn-primary btn-left pull-left" type="submit"><a href="#first_article" class="submit_btn">목록</a></button>
+               <button class="btn btn-primary btn-right pull-right" type="submit"><a href="board_write.html" class="submit_btn">글쓰기</a></button>
+               <ul class="pagination">
+                  <li class="previous"><a href="#">Previous</a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li class="next"><a href="#">Next</a></li>
+               </ul>
+            </div>
+            <!-- 찾기 -->
+
+            <!-- write btn -->
+            <div class="row text-center">
+               <div class="col-sm-4">
+                  <form class="form-inline">
+
+                     <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        글쓴이<span class="caret"></span>
+                      </a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#">글제목</a></li>
+                              <li><a href="#">글내용</a></li>
+                              <li><a href="#">글쓴이+글제목</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+               </div>
+               <div class="col-sm-4">
+                  <input type="text" class="form-control text-left" size="50" placeholder="찾으시는 글 또는 작성자를 입력해주세요." required>
+               </div>
+               <div class="col-sm-4 suchedbutton">
+                  <a href="#" class="btn btn-default btn-lg pull-left">
+                     <span class="glyphicon glyphicon-search"></span> 찾기
+                  </a>
+                  </form>
+               </div>
+            </div>
+         </div>
+         </div>
+
+
+
+
+
+
+
+
+
+         <!-- footer -->
+         <footer id="footer" class="container-fluid text-center">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-2">
+                     <h2>BitCoin</h2>
+                  </div>
+                  <div class="col-sm-8">
+                     <p>가산디지털단지역 KOSTA 사무실 || 고객상담실 : 080 - 000 - 0000 || 대표이 : 박성용</p>
+                     <p>통신판매업 신고번호 서울-11111호</p>
+                     <p>Copyright &copy; 2016 psy Co., ltd ALL RIGHTS RESERVED</p>
+                  </div>
+                  <div class="col-sm-2">
+                     <h4>Category</h4>
+                     <ul>
+                        <li><a href="skills.html">Board</a></li>
+                        <li><a href="gallery.html">Article</a></li>
+                        <li><a href="board.html">Board</a></li>
+                        <li><a href="shop.html">Q&A</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="login.html">Login</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </footer>
+
+         <!--############################# SCRIPT CODE #############################-->
+         <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+         <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
