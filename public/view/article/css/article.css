@@ -17,7 +17,32 @@
 }
 
 .jumbotron{
-	background: url('../ img/test.jpg') no-repeat;
+	background: url('../img/test.jpg') no-repeat;
 	background-size : 100%;
 }
-  	
+
+#save_btn {
+	float : right;
+}
+ 
+#cancel_btn {
+ 	float : right;
+}
+
+.font-sizeup {
+	font-size : 20px;
+}
+
+body {
+ background: url('../img/articleregiste.jpg') no-repeat;
+ background-attachment : fixed;
+ background-size : 100%;
+}
+
+.title{
+	color : #fff;
+}
+
+.container {
+	 opacity: 0.5;
+}
