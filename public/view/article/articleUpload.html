@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Default HTML</title>
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="css/article.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -39,6 +40,46 @@
     </nav>
   </header>
   <section>
+
+      <div class="container">
+
+        <span>Update Article Info Input Please</span>
+        <hr>
+
+        <form action=" " class="form-horizontal">
+
+          <div class="form-group">
+            <label for="title" class="control-label col-sm-2">Title : </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="title" placeholder="수정할 제목을 입력하세요">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="content" class="control-label col-sm-2">Content : </label>
+            <div class="col-sm-10">
+              <textarea class="form-control" id="content" rows="10" placeholder="수정할 내용을 입력하세요"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="content" class="control-label col-sm-2">Writer : </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="writer" placeholder="수정할 작성자를 입력하세요">
+            </div>
+          </div>
+		  <hr>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="button" id="date_cancle_btn" value="Cancle" />
+              <input type="button" id="date_up_btn" value="Update" />
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
 
   </section>
    <footer id="footer" class="container-fluid text-center">
