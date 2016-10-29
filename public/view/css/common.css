@@ -3,6 +3,11 @@
 /* font */
 @import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
 
+/* initialize */
+*{
+  list-style: none;
+}
+
 /* logo style */
 #logo{
   font-family : 'Permanent Marker', cursive;
@@ -24,4 +29,5 @@
     background-color: #000;
     color: #4BF;
     padding: 20px 0;
+    margin-top:100px;
 }
