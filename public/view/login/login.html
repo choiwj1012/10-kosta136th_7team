@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Default HTML</title>
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -13,25 +14,27 @@
 </head>
 <body>
   <header>
-    <nav class = "navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="../index.html" class="navbar-brand">Kosta7Team</a>
+          <a href="#" id="logo" class="navbar-brand">7team</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="skills.html">AboutUs</a></li>
-            <li><a href="gallery.html">Article</a></li>
-            <li><a href="board.html">Board</a></li>
-            <li><a href="shop.html">QnA</a></li>
-            <li><a href="join.html">SignUp</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="../article/articleList.html">Article</a></li>
+            <li><a href="../board/boardList.html">board</a></li>
+            <li><a href="../qna/qnaList.html">QnA</a></li>
+            <li><a href="../login/signup.html">SignUp</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login/login.html"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
           </ul>
         </div>
       </div>
@@ -91,9 +94,8 @@
           <h2>Kosta7Team</h2>
         </div>
         <div class="col-sm-8">
-          <p>서울특별시 강남구 역삼동 || 고객상담실 : 국번없이 113 || 개인정보관리담장자 : 최원재</p>
-          <p>사업자등록번호 : 728-23-00000 || Kosta7Team co.ltd., || 대표이사 : 최원재 || </p>
-          <p>통신판매업 신고번호 서울-12345호</p>
+          <p>가산디지털단지역 KOSTA 사무실 || 고객상담실 : 080 - 000 - 0000 || 대표이사 : PSY</p>
+          <p>통신판매업 신고번호 서울-11111호</p>
           <p>Copyright &copy; 2016 Kosta7Team Co., ltd ALL RIGHTS RESERVED</p>
         </div>
         <div class="col-sm-2">
