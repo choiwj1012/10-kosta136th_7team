@@ -67,6 +67,25 @@ app.all('/articleDelete', function(request, response){
 
 });
 
+//article 수정
+app.all('/articleUpdate', function(request, response){
+
+  console.log('/articleUpdate 요청받음');
+  var num = parseInt(req.param('num'));
+  var title = req.param('title');
+  var content = req.param('content');
+  var writer = req.param('writer');
+  
+  var article = new Article(title, content, writer);
+  
+  article.num = num;
+  
+  var isSuccess = Controller.getArticleController().
+  
+  console.log('응답 데이터');
+  res.send(isSuccess);
+});
+
 // board 글쓰기
 app.all('/boardWrite', function(request, response){
 
