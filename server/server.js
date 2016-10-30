@@ -78,6 +78,8 @@ app.all('/articleRead', function(request, response){
   console.log('/articleRead 요청받음');
   var num = parseInt(request.param('num'));
   var send_article = Controller.getArticleController().requestArticleRead(num);
+  
+  response.send(send_article);
 
 });
 
@@ -201,3 +203,5 @@ app.all('/signup', function(request, response){
   console.log('/signup 요청받음');
 
 });
+
+module.exports = db;
