@@ -41,7 +41,7 @@ articleController_back.requestArticleUpdate = function(article){
 // Read Controller
 articleController_back.requestArticleRead = function(num) {
 	
-	var send article = articleDao_back.readDao();
+	var send_article = articleDao_back.readDao();
 	return send_article;
 	
 };
@@ -49,15 +49,15 @@ articleController_back.requestArticleRead = function(num) {
 // SelectedDelete Controller
 articleController_back.requestArticleSelectedDelete = function(delete_nums) {
 	
-	var isSuccess = dao.selectDeleteDao(delete_nums);
+	var isSuccess = articleDao_back.selectDeleteDao(delete_nums);
 	return isSuccess;
 	
 }
 
 // Delete Controller
-articleController_back.requestArticleDelete =function(num) {
+articleController_back.requestArticleDelete = function(num) {
 	
-	 isSuccess = dao.deleteDao(num);
+	 var isSuccess = articleDao_back.deleteDao(num);
 	 return isSuccess;
 	
 }

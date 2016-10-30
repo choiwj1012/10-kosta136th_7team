@@ -17,54 +17,54 @@
 <!-- write btn 핸들링 -->
 <script>
   	$(document).ready(function() {
-  		
+
   		$('#write_btn').click(function() {
-  			
+
   			Controllers.getArticleController().requestWriteView();
-  			
+
   		});
-  		
+
   	});
 </script>
- 
+
 <!-- 글조회 이벤트 핸들링 -->
 <script>
 
 	$(document).ready(function() {
-		
+
 		$('.title_td').click(function() {
-			
+
 			alert("클릭되었습니다");
 			var num = parseInt($(this).prev().text());
 			var article = Controllers.getArticleController().requestSelectOne(num);
-			
+
 		});
-		
+
 	});
 
 </script>
 
 <!-- 전체 선택 이벤트 핸들링 -->
-<script>	
-	
+<script>
+
 		$(document).ready(function() {
-		
+
 			$('#all_check').click(function(){
-				
+
 				var trs = $('tbody').children();
-				
-				if (this.checked) {				
+
+				if (this.checked) {
 					for(var i = 0 ; i < trs.length ; i++) {
-						trs.eq(i).children().first().children().prop('checked', true);					
+						trs.eq(i).children().first().children().prop('checked', true);
 					}
 	            } else {
 					for(var i = 0 ; i < trs.length ; i++) {
-						trs.eq(i).children().first().children().prop('checked', false);					
+						trs.eq(i).children().first().children().prop('checked', false);
 					}
 	            }
-				
+
 			});
-			
+
 		});
 
 </script>
@@ -72,13 +72,13 @@
 <!-- 삭제 취소 btn 핸들링 -->
 <script>
   	$(document).ready(function() {
-  		
+
   		$('#delete_false_btn').click(function() {
-  			
+
   			Controllers.getArticleController().requestListView();
-  			
+
   		});
-  		
+
   	});
 </script>
 
@@ -86,59 +86,59 @@
 <script>
 
 	$(document).ready(function() {
-	
+
 		$('#delete_success_btn').click(function(){
-			
+
 			var delete_nums = [];
 			var trs = $('tbody').children();
-			
+
 			for(var i = 0 ; i < trs.length ; i++) {
-				
+
 				var checked = trs.eq(i).children().first().children().prop('checked');
-				
+
 				if(checked) {
 					var num = trs.eq(i).children().eq(1).text();
 					delete_nums.push(num);
-					//여기서는 break 하면 안되지요. 
+					//여기서는 break 하면 안되지요.
 					//여러개를 체크해서 삭제할 수도 있으니 또 체크된 것이 없나 나머지도 검색해 봐야 겠지요.
 				}
 			}
-						
+
 			//nums 배열을 컨트롤러에 전달하여 레파지토리에서 해당 게시글(들) 삭제
 			Controllers.getArticleController().requestSelectDelete(delete_nums);
-			
+
 		});
-		
+
 	});
-	
+
 </script>
 
 <!-- 글목록 이벤트 핸들링 -->
 <script type="text/javascript">
 
 	$(document).ready(function() {
-		
+
 		var articles = Controllers.getArticleController().requestSelectAll();
-		
+
 		if(articles.length === 0) {
 			alert('등록된 글이 없습니다.');
 			return;
 		}
-		
+
 		for(var i = 0 ; i < articles.length ; i++) {
 			var td_check = $('<td></td>').html('<input type="checkbox">');
-			var td_num = $('<td></td>').html(articles[i].num);			
+			var td_num = $('<td></td>').html(articles[i].num);
 			var td_title = $('<td class="title_td"></td>').html(articles[i].title);
 			var td_writer = $('<td></td>').html(articles[i].writer);
 			var td_readCount = $('<td></td>').html(articles[i].readCount);
-						
+
 			var tr = $('<tr></tr>');
 			tr.append(td_check, td_num, td_title, td_writer, td_readCount);
 			$('tbody').append(tr);
 		}
-		
+
 	});
-	
+
 </script>
 
 </head>
@@ -270,12 +270,12 @@
 				<div class="col-sm-2">
 					<h4>Category</h4>
 					<ul>
-						<li><a href="skills.html">Board</a></li>
-						<li><a href="gallery.html">Article</a></li>
-						<li><a href="board.html">Board</a></li>
-						<li><a href="shop.html">Q&A</a></li>
-						<li><a href="join.html">Join</a></li>
-						<li><a href="login.html">Login</a></li>
+            <li><a href="../board/boardList.html">board</a></li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="articleList.html">Article</a></li>
+            <li><a href="../qna/qnaList.html">QnA</a></li>
+            <li><a href="../login/signup.html">SignUp</a></li>
+            <li><a href="../login/login.html">Login</a></li>
 					</ul>
 				</div>
 			</div>
