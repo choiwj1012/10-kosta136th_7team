@@ -57,40 +57,53 @@ articleDao_back.saveDao = function(article) {
 
 };
 
-// 글리스트 method
+// 글목록 dao method
 articleDao_back.listDao = function() {
 
-	var send_articles;
+	var send_articles = [];
 
 	try {
 
 		var sql = 'select * from articles';
 
-		listQuery(sql, function(result) {
+    // db.query(sql, function(error, result){
+    //
+    //   if(!error){
+    //     send_articles = result;
+    //   }
+    //
+    // });
 
-			send_articles = result;
+    function selectAllQuery(sql, callback) {
 
-		});
+      db.query(sql, function(error, result) {
 
-		function listQuery(sql, callback) {
+        if(!error){
+          send_articles = result;
+        }
 
-			db.query(sql, function(error, result) {
+      });
 
-			});
+      callback(send_articles);
 
-			callback({ send_articles });
+    }
 
-		}
+    selectAllQuery(sql, function(result) {
+
+      send_articles = result;
+      console.log(send_articles);
+      return send_articles;
+
+    });
+
 
 	} catch (e) {
 
 		console.log('ArticleDao 객체 : listDao 메서드에서 예외 발생');
-
-		send_articles = { undefined };
+    console.log(e.message);
+		send_articles = undefined;
 
 	}
-
-  return send_articles;
 
 };
 

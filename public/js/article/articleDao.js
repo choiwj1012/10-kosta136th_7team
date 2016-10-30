@@ -44,12 +44,15 @@ function ArticleDao() {
 
 			});
 
-
 		} catch (e) {
+
 			console.log('ArticleDao 객체 : selectAllDao 메서드에서 예외 발생');
 			console.log(e.message);
+
 		}
 
+		console.log("제대로 가자 좀");
+		console.log(articles);
 		return articles;
 
 	};
