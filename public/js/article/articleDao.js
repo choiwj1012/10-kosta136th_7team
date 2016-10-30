@@ -8,7 +8,7 @@ function ArticleDao() {
 
 		try {
 			$.ajax({
-				url: '/save',
+				url: '/articleWrite',
 				async : false,
 				type: 'get',
 				dataType: 'json',
@@ -34,7 +34,7 @@ function ArticleDao() {
 
 			//동기식
 			$.ajax({
-				url: '/selectAll',
+				url: '/articleList',
 				async : false,
 				type: 'get',
 				dataType: 'json',
@@ -62,7 +62,7 @@ function ArticleDao() {
 		try {
 			//동기식
 			$.ajax({
-				url: '/selectOne',
+				url: '/articleRead',
 				async : false,
 				type: 'get',
 				data: {
@@ -91,7 +91,7 @@ function ArticleDao() {
 		try {
 			//동기식
 			$.ajax({
-				url: '/selectDelete',
+				url: '/articleSelectedDelete',
 				async : false,
 				type: 'get',
 				dataType: 'json',
@@ -121,7 +121,7 @@ function ArticleDao() {
 		try {
 			//동기식
 			$.ajax({
-				url: '/delete',
+				url: '/articleDelete',
 				async : false,
 				type: 'get',
 				dataType: 'json',
@@ -151,7 +151,7 @@ function ArticleDao() {
 		try {
 			//동기식
 			$.ajax({
-				url: '/update',
+				url: '/articleUpdate',
 				async : false,
 				type: 'get',
 				dataType: 'json',

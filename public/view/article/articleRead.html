@@ -72,6 +72,7 @@
 	
 		var requestUrl = window.location.href; //주소 복사
     	var requestQueryString = window.location.href.slice(requestUrl.indexOf('?') + 1); //requestUrl.indexOf('?') 시작  +1끝
+    	console.log(requestQueryString);
     	var requestParameters = requestQueryString.split('&'); //분해
     
     	var num = requestParameters[0].split('=')[1];
@@ -193,9 +194,8 @@
 									<div class="form-group">
 										<label for="deletequestion"><span
 											class="glyphicon glyphicon-user"></span>삭제 하시겠습니까?</label> <input
-											type="button" class="form-control" id="delete_success_btn"
-											value="네"> <input type="button" class="form-control"
-											id="delete_false_btn" value="아니요">
+											type="button" class="form-control" id="delete_success_btn" value="네">
+											<input type="button" class="form-control" id="delete_false_btn" value="아니요">
 									</div>
 								</form>
 							</div>
