@@ -26,7 +26,7 @@ http.createServer(app).listen(3000, function(){
   console.log('starting web server ... http://localhost:3000');
 });
 
-// connection test
+// controller connection test
 Controller.getArticleController().test();
 Controller.getBoardController().test();
 Controller.getLoginController().test();
@@ -39,7 +39,7 @@ Controller.getLoginController().requestLoginWrite();
 Controller.getQnaController().requestQnaWrite();
 
 // router
-// 메인페이지 요청
+// request Main Page
 app.all('/', function(request, response){
 
   response.redirect('view/index.html');

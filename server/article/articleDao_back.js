@@ -1,7 +1,5 @@
 var articleDao_back = function(){
 
-
-
 };
 
 articleDao_back.test = function(){
