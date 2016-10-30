@@ -4,6 +4,7 @@
 var http = require('http');
 var express = require('express');
 var mysql = require('mysql');
+var Controller = require('./Controller');
 
 // connect mysql DB
 var db = mysql.createConnection({
@@ -23,3 +24,7 @@ app.use(app.router);
 http.createServer(app).listen(3000, function(){
   console.log('starting web server ... http://localhost:3000');
 });
+
+// connection
+Controller.getArticleController();
+Controller.getArticleController().test();
