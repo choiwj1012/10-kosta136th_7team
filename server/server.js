@@ -27,3 +27,6 @@ http.createServer(app).listen(3000, function(){
 
 // connection
 Controller.getArticleController().test();
+Controller.getBoardController().test();
+Controller.getLoginController().test();
+Controller.getQnaController().test();
