@@ -33,6 +33,7 @@ function ArticleDao() {
 
 			//동기식
 			$.ajax({
+
 				url: '/articleList',
 				async : false,
 				type: 'get',
@@ -40,6 +41,7 @@ function ArticleDao() {
 				success:  function (data) {
 					articles = data;
 				}
+
 			});
 
 

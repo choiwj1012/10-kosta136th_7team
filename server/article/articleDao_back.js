@@ -2,12 +2,14 @@ var articleDao_back = function(){
 
 };
 
+// test method
 articleDao_back.test = function(){
 
   console.log("articleDao_back 연결 테스트 입니다");
 
 };
 
+// 글저장 method
 articleDao_back.saveDao = function(article) {
 
 	var isSuccess;
@@ -32,7 +34,7 @@ articleDao_back.saveDao = function(article) {
 			callback({ message : true });
 
 		}
-    
+
 	} catch (e) {
 
 		console.log('ArticleDao 객체 : saveDao 메서드에서 예외 발생');
@@ -44,6 +46,7 @@ articleDao_back.saveDao = function(article) {
 
 };
 
+// 글리스트 method
 articleDao_back.listDao = function() {
 
 	var send_articles;
@@ -76,8 +79,11 @@ articleDao_back.listDao = function() {
 
 	}
 
+  return send_articles;
+
 };
 
+// 글선택읽기 method
 articleDao_back.readDao = function(num) {
 
 	var send_article;
@@ -112,10 +118,11 @@ articleDao_back.readDao = function(num) {
 
 };
 
+// 글 수정 method
 articleDao_back.updateDao = function(article) {
 
-
 	var isSuccess;
+
 	try {
 
 	var sql = 'update from articles where num =?';
@@ -147,6 +154,7 @@ articleDao_back.updateDao = function(article) {
 
 };
 
+// 글삭제 method
 articleDao_back.deleteDao = function(num) {
 
 	var isSuccess;
@@ -180,6 +188,7 @@ articleDao_back.deleteDao = function(num) {
 
 };
 
+// 글 선택 삭제 method
 articleDao_back.selectDeleteDao = function(delete_nums) {
 
 	var isSuccess;

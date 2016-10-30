@@ -33,12 +33,6 @@ Controller.getBoardController().test();
 Controller.getLoginController().test();
 Controller.getQnaController().test();
 
-// each module connect test
-// Controller.getArticleController().requestArticleWrite();
-// Controller.getBoardController().requestBoardWrite();
-// Controller.getLoginController().requestLoginWrite();
-// Controller.getQnaController().requestQnaWrite();
-
 // router
 // request Main Page
 app.all('/', function(request, response){
