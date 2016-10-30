@@ -31,7 +31,11 @@ Controller.getBoardController().test();
 Controller.getLoginController().test();
 Controller.getQnaController().test();
 
+// each module connect test
 Controller.getArticleController().requestArticleWrite();
+Controller.getBoardController().requestBoardWrite();
+Controller.getLoginController().requestLoginWrite();
+Controller.getQnaController().requestQnaWrite();
 
 // router
 // 메인페이지 요청
