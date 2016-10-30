@@ -69,7 +69,7 @@
 
 </script>
 
-<!-- write btn 핸들링 -->
+<!-- 삭제 취소 btn 핸들링 -->
 <script>
   	$(document).ready(function() {
   		
@@ -80,6 +80,37 @@
   		});
   		
   	});
+</script>
+
+<!-- 선택 삭제 이벤트 핸들링 -->
+<script>
+
+	$(document).ready(function() {
+	
+		$('#delete_success_btn').click(function(){
+			
+			var delete_nums = [];
+			var trs = $('tbody').children();
+			
+			for(var i = 0 ; i < trs.length ; i++) {
+				
+				var checked = trs.eq(i).children().first().children().prop('checked');
+				
+				if(checked) {
+					var num = trs.eq(i).children().eq(1).text();
+					delete_nums.push(num);
+					//여기서는 break 하면 안되지요. 
+					//여러개를 체크해서 삭제할 수도 있으니 또 체크된 것이 없나 나머지도 검색해 봐야 겠지요.
+				}
+			}
+						
+			//nums 배열을 컨트롤러에 전달하여 레파지토리에서 해당 게시글(들) 삭제
+			Controllers.getArticleController().requestSelectDelete(delete_nums);
+			
+		});
+		
+	});
+	
 </script>
 
 <!-- 글목록 이벤트 핸들링 -->

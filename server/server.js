@@ -6,6 +6,7 @@ var express = require('express');
 var mysql = require('mysql');
 var Controller = require('./Controller');
 
+
 // connect mysql DB
 var db = mysql.createConnection({
   host : 'localhost',
@@ -82,14 +83,15 @@ app.all('/articleUpdate', function(request, response){
   var content = req.param('content');
   var writer = req.param('writer');
   
-  var article = new Article(title, content, writer);
+  var article = new article_back(title, content, writer);
   
   article.num = num;
   
-  var isSuccess = Controller.getArticleController().articleController_back.requestArticleUpdate(article);
+  var isSuccess = Controller.getArticleController().requestArticleUpdate(article);
   
   console.log('응답 데이터');
-  res.send(isSuccess);
+  response.send(isSuccess);
+  
 });
 
 // board 글쓰기
