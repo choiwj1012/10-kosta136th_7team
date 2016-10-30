@@ -1,106 +1,106 @@
 @charset "UTF-8";
 
 #span_left {
-	float : left;
+	float: left;
 }
 
 #span_right {
-  	float : right;
+	float: right;
 }
 
 #delete_btn {
-  	float : left;
+	float: left;
 }
 
 #write_btn {
-  	float : right;
+	float: right;
 }
 
 #selectspan_right {
-	float : right;
+	float: right;
 }
 
-#Listjumbotron{
+#Listjumbotron {
 	background: url('../img/test.jpg') no-repeat;
-	background-size : 100%;
+	background-size: 100%;
 }
 
 #save_btn {
-	float : right;
+	float: right;
 }
- 
+
 #cancel_btn {
- 	float : right;
+	float: right;
 }
 
 .font-sizeup {
-	font-size : 20px;
+	font-size: 20px;
 }
 
 .writeview {
- background: url('../img/articleregiste.jpg') no-repeat;
- background-attachment : fixed;
- background-size : 100%;
+	background: url('../img/articleregiste.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
 }
 
-.title{
-	color : #fff;
+.title {
+	color: #fff;
 }
 
 #writetitle {
-	 opacity: 0.5;
+	opacity: 0.5;
 }
 
 #writecontent {
-	 opacity: 0.5;
+	opacity: 0.5;
 }
 
 #writewriter {
-	 opacity: 0.5;
+	opacity: 0.5;
 }
 
-#update_btn{
-	float : right;
+#update_btn {
+	float: right;
 }
 
-#delete_btn{
-	float : right;
+#onedelete_btn {
+	float: right;
 }
 
-#Listreturn_btn{
-	float : right;
+#Listreturn_btn {
+	float: right;
 }
 
 #date_up_btn {
-	float : right;
+	float: right;
 }
 
 #date_cancle_btn {
-	float : right;
+	float: right;
 }
 
 .updatebody {
-	 background : url('../img/update.jpg') no-repeat;
-	 background-position : 50% 0px;
-	 background-attachment : fixed;
- 	 background-size : 50%;
- 	
+	background: url('../img/update.jpg') no-repeat;
+	background-position: 50% 0px;
+	background-attachment: fixed;
+	background-size: 50%;
 }
 
 .readbody {
-	 background : url('../img/read.jpg') no-repeat;
-	 background-position : 50% 0px;
-	 background-attachment : fixed;
- 	 background-size : 50%;
+	background: url('../img/read.jpg') no-repeat;
+	background-position: 50% 0px;
+	background-attachment: fixed;
+	background-size: 50%;
 }
-#updatetitle{
+
+#updatetitle {
 	opacity: 0.5;
 }
 
-#updatecontent{
+#updatecontent {
 	opacity: 0.5;
 }
 
-#updatewriter{
+#updatewriter {
 	opacity: 0.5;
 }
