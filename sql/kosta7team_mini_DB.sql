@@ -1,4 +1,4 @@
-create database articledb;
+CREATE database articledb;
 
 use articledb;
 
@@ -23,13 +23,22 @@ create table articles (
 	content varchar(300) not null,
 	writer varchar(50) not null,
 	readCount int not null default 0
-    
+
+);
+
+create table boards (
+
+	num int auto_increment primary key,
+	title varchar(50) not null,
+	content varchar(300) not null,
+	writer varchar(50) not null,
+	readCount int not null default 0
+
 );
 
 
 select * from articles;
 select * from users;
+select * from boards;
 
 show tables;
-
-

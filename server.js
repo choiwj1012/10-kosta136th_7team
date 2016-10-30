@@ -126,6 +126,15 @@ app.all('/articleDelete'), function(request, response) {
 app.all('/boardWrite', function(request, response){
 
   console.log('/boardWrite 요청받음');
+  var title = request.parm('title');
+  var content = request.parm('content');
+  var writer = request.parm('writer');
+
+  var board = new Board(title, content, writer);
+  var isSuccess = boardController_back.requestBoardWrite(board);
+
+  console.log('응답 데이터');
+  response.send(isSuccess);
 
 });
 
@@ -140,6 +149,12 @@ app.all('/boardList', function(request, response){
 app.all('/boardRead', function(request, response){
 
   console.log('/boardRead 요청받음');
+  var searchNum = request.parm('searchNum');
+
+  var selectedBoard = boardController_back.requestBoardWrite(searchNum);
+
+  console.log('응답 데이터');
+  response.send(isSuccess);
 
 });
 

@@ -10,15 +10,22 @@ function BoardController() {
 
 	};
 
-	// 글저장 controller 메서드
-	this.requestSave = function(board) {
 
-		var isSuccess = dao.saveDao(board);
+	this.requestBoardListView = function(){
+
+	  document.location = 'boardList.html';
+
+  };
+
+	// 글저장 controller 메서드
+	this.requestWrite = function(board) {
+
+		var isSuccess = dao.writeDao(board);
 
 		if (isSuccess === true) {
-			alert('글 저장 성공');
+			alert('글 등록에 성공했습니다.');
 		} else {
-			alert('글 저장 실패');
+			alert('글 등록에 실패했습니다.');
 		}
 
 		document.location = 'boardList.html';
@@ -36,8 +43,8 @@ function BoardController() {
 	// 글조회 controller 메서드
 	this.requestSelectOne = function(num) {
 
-		var selectOneBoard = dao.selectOneDao(num);
-		var requestUrl = 'selectOneView.html';
+		var boardRead = dao.selectOneDao(num);
+		var requestUrl = 'boardRead.html';
 		requestUrl = requestUrl + '?num=' + selectOneBoard.num;
 		requestUrl = requestUrl + '&title=' + selectOneBoard.title;
 		requestUrl = requestUrl + '&content=' + selectOneBoard.content;

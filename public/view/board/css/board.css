@@ -64,8 +64,17 @@ color: #FFF;
    color: #5AF;
 }
 
+.form-group {
+   font-size: 120%;
+}
+
 eader .header-content {
     padding: 100px 15px
+}
+
+#search_btn {
+
+   padding: 5px;
 }
 
 header .header-content .header-content-inner h1 {

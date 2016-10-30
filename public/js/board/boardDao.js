@@ -2,7 +2,7 @@
 function BoardDao() {
 
 	// 글저장 dao 메서드
-	this.saveDao = function(board) {
+	this.writeDao = function(board) {
 
 		var isSuccess;
 
@@ -16,14 +16,14 @@ function BoardDao() {
 
 			//동기식
 			$.ajax({
-				url: '/save',
-				async : false,
-				type: 'get',
-				dataType: 'json',
-				data: board,
-				success:  function (data) {
-					var messageValue =data;
-					isSuccess = eval('(' + messageValue.message + ')');
+				url: '/boardWrite',						//목적지
+				async : false,						//동기방식
+				type: 'get',						//get 타입 (post타입 등이 있음)
+				dataType: 'json',					//전송 dataType json
+				data: board,						//board속성을 넘긴다.
+				success:  function (data) {			//성공시 return된 객체를
+					var messageValue =data;				//messageValue 객체에 저장한다.
+					isSuccess = eval('(' + messageValue.message + ')');		//js타입으로 변환
 				}
 			});
 
@@ -73,7 +73,7 @@ function BoardDao() {
 		try {
 			//동기식
 			$.ajax({
-				url: '/selectOne',
+				url: '/boardRead',
 				async : false,
 				type: 'get',
 				data: {
