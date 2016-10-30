@@ -112,5 +112,67 @@ function ArticleDao() {
 		return isSuccess;
 
 	};
+	
+	// 글삭제 dao 메서드
+	this.deleteDao = function(DeleteNum) {
+
+		var isSuccess;
+
+		try {
+			//동기식
+			$.ajax({
+				url: '/delete',
+				async : false,
+				type: 'get',
+				dataType: 'json',
+				data: {
+					num : DeleteNum
+				},
+				success:  function (data) {
+					var messageValue = data;
+					isSuccess = eval('(' + messageValue.message + ')');
+				}
+			});
+
+		} catch (e) {
+			console.log('ArticleDao 객체 : deleteDao 메서드에서 예외 발생');
+			console.log(e.message);
+		}
+
+		return isSuccess;
+
+	};
+	
+	// 글수정 dao 메서드
+	this.updateDao = function(article) {
+
+		var isSuccess;
+
+		try {
+			//동기식
+			$.ajax({
+				url: '/update',
+				async : false,
+				type: 'get',
+				dataType: 'json',
+				data: {
+					num : article.num,
+					title: article.title,
+					content: article.content,
+					writer: article.writer
+				},
+				success:  function (data) {
+					var messageValue = data;
+					isSuccess = eval('(' + messageValue.message + ')');
+				}
+			});
+		} catch (e) {
+			console.log('ArticleDao 객체 : deleteDao 메서드에서 예외 발생');
+			console.log(e.message);
+		}
+
+		return isSuccess;
+
+	};
 
 }
