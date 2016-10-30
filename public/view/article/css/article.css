@@ -16,7 +16,11 @@
   	float : right;
 }
 
-.jumbotron{
+#selectspan_right {
+	float : right;
+}
+
+#Listjumbotron{
 	background: url('../img/test.jpg') no-repeat;
 	background-size : 100%;
 }
@@ -43,6 +47,26 @@
 	color : #fff;
 }
 
-.container {
+#writeview {
 	 opacity: 0.5;
+}
+
+#update_btn{
+	float : right;
+}
+
+#delete_btn{
+	float : right;
+}
+
+#Listreturn_btn{
+	float : right;
+}
+
+#date_up_btn {
+	float : right;
+}
+
+#date_cancle_btn {
+	float : right;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" ng-app>
+
 <head>
   <meta charset="UTF-8">
   <title>Default HTML</title>
@@ -11,39 +12,84 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
-<body>
-   <header>
 
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<body>
+  <header>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a href="../index.html" id="logo" class="navbar-brand">7team</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-           <ul class="nav navbar-nav">
-             <li class="active"><a href="../index.html">Home</a></li>
-             <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
-             <li><a href="../article/articleList.html">Article</a></li>
-             <li><a href="boardList.html">board</a></li>
-             <li><a href="../qna/qnaList.html">QnA</a></li>
-             <li><a href="../login/signup.html">SignUp</a></li>
-           </ul>
-           <ul class="nav navbar-nav navbar-right">
-             <li><a href="login/login.html"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
-           </ul>
+          <a href="../index.html" id="logo" class="navbar-brand">7team</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="../article/articleList.html">Article</a></li>
+            <li><a href="boardList.html">board</a></li>
+            <li><a href="../qna/qnaList.html">QnA</a></li>
+            <li><a href="../login/signup.html">SignUp</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../login/login.html"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+
+  <!-- 페이지 타이틀 -->
+  <div class="jumbotron text-center">
+    <h1>FREE BOARD</h1>
+    <p>당신의 생각을 마음껏 적어주세요 </p>
+  </div>
+  <section>
+    <div class="container">
+
+      <form action="" class="form-horizontal">
+        <div class="form-group">
+          <label for="title" class="col-sm-2">제목:</label>
+          <div class="col-sm-10">
+            <input type="title" class="form-control" id="title">
           </div>
         </div>
-      </nav>
 
-   </header>
-  <section>
+        <div class="form-group">
+          <label for="writer" class="col-sm-2">작성자:</label>
+          <div class="col-sm-10">
+            <input type="writer" class="form-control" id="writer">
+          </div>
+        </div>
 
-  </section>
+        <div class="form-group">
+          <label for="writeDate" class="col-sm-2">작성일:</label>
+          <div class="col-sm-10">
+            <input type="writeDate" class="form-control" id="writeDate">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="content" class="col-sm-2">내용:</label>
+           <div class="col-sm-10">
+              <textarea class="form-control" rows="5" id="content"></textarea>
+           </div>
+         </div>
+
+         <div class="buttons" align="right" id="buttons">
+           <button type="button" class="btn btn-primary" onclick="location.href='boardList.html'">등록</button>
+           <button type="button" class="btn btn-danger" onclick="location.href='boardList.html'">목록</button>
+         </div>
+
+       </form>
+     </div>
+   </section>
   <!-- footer -->
   <footer id="footer" class="container-fluid text-center">
      <div class="container">

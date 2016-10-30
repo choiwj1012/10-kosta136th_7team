@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="#" id="logo" class="navbar-brand">7team</a>
+          <a href="../index.html" id="logo" class="navbar-brand">7team</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
@@ -40,7 +40,7 @@
     </nav>
   </header>
   <section>
-	<div class="jumbotron text-center">
+	<div class="jumbotron text-center" id="Listjumbotron">
 		<h1>Article List page</h1>
 		<p>자유로운 대화가 오가는 게시판</p>
 	</div>
@@ -60,9 +60,10 @@
 				</tr>
 			</thead>
 		</table>
+		<hr>
 		<div class="container text-center">
 			
-			<input type="button" id="delete_btn" value="삭제" />
+			<input type="button" id="delete_btn" data-toggle="modal" data-target="#myModal" value="삭제" />
 
 			<ul class="pagination pagination-lg pager">
 				<li><a href="#">Previous</a></li>
@@ -79,6 +80,33 @@
 			<input type="text" />
 			<input type="button" id="search_btn" value="검색"/>
 		</div>
+		 <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Delete</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+            <label for="deletequestion"><span class="glyphicon glyphicon-user"></span>삭제 하시겠습니까?</label>
+               <input type="button" class="form-control" id="delete_success_btn" value="네">
+               <input type="button" class="form-control" id="delete_false_btn" value="아니요">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 	</div>
   </section>
   <footer id="footer" class="container-fluid text-center">
@@ -106,5 +134,15 @@
                </div>
             </div>
   </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86521502-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
