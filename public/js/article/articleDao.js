@@ -51,8 +51,6 @@ function ArticleDao() {
 
 		}
 
-		console.log("제대로 가자 좀");
-		console.log(articles);
 		return articles;
 
 	};

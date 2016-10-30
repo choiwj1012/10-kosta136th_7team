@@ -8,6 +8,7 @@ function ArticleController() {
 		document.location = "articleWrite.html";
 
 	};
+
 	//articleListView Controller 메서드
 	this.requestListView = function() {
 
@@ -27,10 +28,11 @@ function ArticleController() {
 		} else {
 
 			alert('게시글 등록이 실패하였습니다.');
-			
+
 		}
 
 		document.location = "articleList.html";
+
 	};
 
 	// 글목록 controller 메서드
@@ -73,7 +75,9 @@ function ArticleController() {
 		} else {
 			alert('글 수정 실패');
 		}
+
 		return isSuccess;
+
 	};
 
 	// 글선택 삭제 controller 메서드
@@ -88,6 +92,7 @@ function ArticleController() {
 		}
 
 		document.location = 'articleList.html';
+		
 	};
 
 	// 글삭제 controller 메서드
