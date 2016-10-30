@@ -82,7 +82,7 @@ app.all('/articleUpdate', function(request, response){
   
   article.num = num;
   
-  var isSuccess = Controller.getArticleController().
+  var isSuccess = Controller.getArticleController().articleController_back.requestArticleUpdate(article);
   
   console.log('응답 데이터');
   res.send(isSuccess);

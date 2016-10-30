@@ -23,19 +23,15 @@
 
 		alert('수정 버튼 클릭됨.');
 
-			
+			var number = $('#number').val();
 			var title = $('#title').val(); 
 			var content = $('#content').val(); 
 			var writer = $('#writer').val(); 
 			var article = new Article(title, content, writer);
+			article.num = number
 			
+			console.log(aritcle);
 			var isSuccess = Controllers.getArticleController().requestUpdate(article);
-			if(isSuccess == true){ 
-				$('.inputs').attr('readonly','readonly');
-				$('.inputs').css('background-color', 'white');
-			} else {
-				
-			}
 			
 		});
 	});

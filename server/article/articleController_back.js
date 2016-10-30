@@ -20,5 +20,13 @@ articleController_back.requestArticleWrite = function(){
 
 }
 
+articleController_back.requestArticleUpdate = function(article){
+
+	  var isSuccess = articleDao_back.
+	
+//	  var article = new article_back();
+//	  console.log(article.number);
+
+	}
 
 module.exports = articleController_back;
