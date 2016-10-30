@@ -6,8 +6,7 @@ var Controller = function(){
 
 Controller.getArticleController = function(){
 
-    console.log("테스트입니다");
-    return articleController;
+    return articleController_back;
 
 }
 

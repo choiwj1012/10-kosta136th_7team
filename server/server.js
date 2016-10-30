@@ -26,5 +26,4 @@ http.createServer(app).listen(3000, function(){
 });
 
 // connection
-Controller.getArticleController();
 Controller.getArticleController().test();
