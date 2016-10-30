@@ -31,6 +31,8 @@ Controller.getBoardController().test();
 Controller.getLoginController().test();
 Controller.getQnaController().test();
 
+Controller.getArticleController().requestArticleWrite();
+
 // router
 // 메인페이지 요청
 app.all('/', function(request, response){
