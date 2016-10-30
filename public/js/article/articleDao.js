@@ -1,4 +1,4 @@
-module.exports = Controllers;
+
 function ArticleDao() {
 	
 	//글저장 dao 메서드
