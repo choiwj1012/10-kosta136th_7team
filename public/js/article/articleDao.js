@@ -1,4 +1,3 @@
-
 function ArticleDao() {
 
 	//글저장 dao 메서드
@@ -34,6 +33,7 @@ function ArticleDao() {
 
 			//동기식
 			$.ajax({
+
 				url: '/articleList',
 				async : false,
 				type: 'get',
@@ -41,6 +41,7 @@ function ArticleDao() {
 				success:  function (data) {
 					articles = data;
 				}
+
 			});
 
 
@@ -49,8 +50,7 @@ function ArticleDao() {
 			console.log(e.message);
 		}
 
-		return 
-		;
+		return articles;
 
 	};
 
@@ -112,7 +112,7 @@ function ArticleDao() {
 		return isSuccess;
 
 	};
-	
+
 	// 글삭제 dao 메서드
 	this.deleteDao = function(DeleteNum) {
 
@@ -142,7 +142,7 @@ function ArticleDao() {
 		return isSuccess;
 
 	};
-	
+
 	// 글수정 dao 메서드
 	this.updateDao = function(article) {
 

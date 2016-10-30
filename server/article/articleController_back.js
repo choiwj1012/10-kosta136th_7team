@@ -1,4 +1,3 @@
-var article_back = require('./article_back');
 var articleDao_back = require('./articleDao_back');
 
 var articleController_back = function(){
@@ -10,7 +9,6 @@ articleController_back.test = function(){
 
   console.log("articleController_back 연결 테스트입니다");
   articleDao_back.test();
-  article_back.test();
 
 }
 
@@ -23,11 +21,11 @@ articleController_back.requestArticleWrite = function(article){
 }
 
 // List Controller
-articleController_back.requestrequestArticleList = function() {
-	
+articleController_back.requestArticleList = function() {
+
 	var send_articles = articleDao_back.listDao();
 	return send_articles;
-	
+
 };
 
 // update Controller
@@ -35,36 +33,31 @@ articleController_back.requestArticleUpdate = function(article){
 
 	  var isSuccess = articleDao_bac.updateDao(article);
 	  return isSuccess;
-	  
+
 };
 
 // Read Controller
 articleController_back.requestArticleRead = function(num) {
-	
+
 	var send_article = articleDao_back.readDao();
 	return send_article;
-	
+
 };
 
 // SelectedDelete Controller
 articleController_back.requestArticleSelectedDelete = function(delete_nums) {
-	
+
 	var isSuccess = articleDao_back.selectDeleteDao(delete_nums);
 	return isSuccess;
-	
+
 }
 
 // Delete Controller
 articleController_back.requestArticleDelete = function(num) {
-	
+
 	 var isSuccess = articleDao_back.deleteDao(num);
 	 return isSuccess;
-	
+
 }
 
 module.exports = articleController_back;
-
-
-
-
-
