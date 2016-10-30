@@ -1,7 +1,5 @@
 var qnaDao_back = function(){
 
-
-
 };
 
 qnaDao_back.test = function(){
