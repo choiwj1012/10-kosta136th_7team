@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Default HTML</title>
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="./css/signup.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
@@ -40,7 +41,76 @@
   </header>
 
 <!-- ############################# Page Title ############################## -->
+<section>
+  <div class="jumbotron">
+    <h1>Kosta7Team</h1>
+    <p>Willkommen</p>
+  </div>
 
+<!-- ############################## JoinBox ############################### -->
+  <div class="container" id="joinBox">
+    <h2 class="text-center">SignUp</h2>
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="userID">아이디 :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="userID" placeholder="아이디를 입력해주세요" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="userPwd">비밀번호 :</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="userPwd" placeholder="비밀번호를 입력해주세요" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="reUserPwd">재입력 :</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="reUserPwd" placeholder="비밀번호를 다시한번 입력해주세요" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="userName">이름 :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="userName" placeholder="이름을 입력해주세요" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="userName">전화번호 :</label>
+        <div class="col-sm-10">
+          <input type="tel" class="form-control" id="userName" placeholder="전화번호를 입력해주세요" required>
+        </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <label class="control-label col-sm-2" for="userName">이름 :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="userName" placeholder="이름을 입력해주세요" required>
+        </div>
+      </div> -->
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="userAddress">주소 :</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="userAddress" placeholder="주소를 입력해주세요" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-myButton">가입하기</button>
+          <button type="button" class="btn btn-facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i> &nbsp;페이스북으로 가입하기</button>
+          <button type="button" class="btn btn-instagram"><i class="fa fa-instagram" aria-hidden="true"></i> &nbsp;인스타그램으로 가입하기</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</section>
 
   <!-- ########################### FOOTER ###################################-->
   <footer id="footer" class="container-fluid text-center">
