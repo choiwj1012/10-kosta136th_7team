@@ -50,6 +50,15 @@ app.all('/', function(request, response){
 app.all('/articleWrite', function(request, response){
 
   console.log('/articleWrite 요청받음');
+  var title = request.param('title');
+  var content = request.param('content');
+  var writer = request.param('writer');
+  
+  var article = new article_back(title, content, writer);
+  var isSuccess = Controller.getArticleController().requestArticleWrite(article);
+ 
+  console.log('응답 데이터');
+  response.send(isSuccess);
 
 });
 
@@ -57,6 +66,9 @@ app.all('/articleWrite', function(request, response){
 app.all('/articleList', function(request, response){
 
   console.log('/articleList 요청받음');
+  var send_articles = Controller.getArticleController().requestArticleList();
+  
+  response.send(send_articles);
 
 });
 
@@ -64,13 +76,21 @@ app.all('/articleList', function(request, response){
 app.all('/articleRead', function(request, response){
 
   console.log('/articleRead 요청받음');
+  var num = parseInt(request.param('num'));
+  var send_article = Controller.getArticleController().requestArticleRead(num);
 
 });
 
 // article 선택글삭제
-app.all('/articleDelete', function(request, response){
+app.all('/articleSelectedDelete', function(request, response){
 
   console.log('/articleDelete 요청받음');
+  var delete_nums = parseInt(request.param('nums'));
+  
+  var isSuccess = Controller.getArticleController().requestArticleSelectedDelete(delete_nums);
+  
+  response(isSuccess);
+  
 
 });
 
@@ -78,10 +98,10 @@ app.all('/articleDelete', function(request, response){
 app.all('/articleUpdate', function(request, response){
 
   console.log('/articleUpdate 요청받음');
-  var num = parseInt(req.param('num'));
-  var title = req.param('title');
-  var content = req.param('content');
-  var writer = req.param('writer');
+  var num = parseInt(request.param('num'));
+  var title = request.param('title');
+  var content = request.param('content');
+  var writer = request.param('writer');
   
   var article = new article_back(title, content, writer);
   
@@ -93,6 +113,17 @@ app.all('/articleUpdate', function(request, response){
   response.send(isSuccess);
   
 });
+//article 삭제
+app.all('/articleDelete'), function(request, response) {
+	
+	console.log('/articleDelete 요청받음');
+	var num = parseInt(request.param('num'));
+	
+	var isSuccess = Controller.getArticleController().requestDelete(num);
+	
+	response.send(isSuccess);
+	
+}
 
 // board 글쓰기
 app.all('/boardWrite', function(request, response){

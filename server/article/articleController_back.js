@@ -14,21 +14,57 @@ articleController_back.test = function(){
 
 }
 
-// 객체 생성 및 속성 불러오기 테스트 (확인후 맡는 용도로 수정할 것)
-articleController_back.requestArticleWrite = function(){
+// save Controller
+articleController_back.requestArticleWrite = function(article){
 
-  var article = new article_back();
-  console.log(article.number);
+  var isSuccess = articleDao_back.saveDao(article);
+  return isSuccess;
 
 }
 
+// List Controller
+articleController_back.requestrequestArticleList = function() {
+	
+	var send_articles = articleDao_back.listDao();
+	return send_articles;
+	
+};
+
+// update Controller
 articleController_back.requestArticleUpdate = function(article){
 
-	  var isSuccess = articleDao_back.saveDao(article);
+	  var isSuccess = articleDao_bac.updateDao(article);
 	  return isSuccess;
-//	  var article = new article_back();
-//	  console.log(article.number);
+	  
+};
 
-	};
+// Read Controller
+articleController_back.requestArticleRead = function(num) {
+	
+	var send article = articleDao_back.readDao();
+	return send_article;
+	
+};
+
+// SelectedDelete Controller
+articleController_back.requestArticleSelectedDelete = function(delete_nums) {
+	
+	var isSuccess = dao.selectDeleteDao(delete_nums);
+	return isSuccess;
+	
+}
+
+// Delete Controller
+articleController_back.requestArticleDelete =function(num) {
+	
+	 isSuccess = dao.deleteDao(num);
+	 return isSuccess;
+	
+}
 
 module.exports = articleController_back;
+
+
+
+
+
