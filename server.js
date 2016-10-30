@@ -5,6 +5,7 @@ var http = require('http');
 var express = require('express');
 var mysql = require('mysql');
 var Controller = require('./Controller');
+var article_back = require('./server/article/article_back');
 
 
 // connect mysql DB
@@ -33,10 +34,10 @@ Controller.getLoginController().test();
 Controller.getQnaController().test();
 
 // each module connect test
-Controller.getArticleController().requestArticleWrite();
-Controller.getBoardController().requestBoardWrite();
-Controller.getLoginController().requestLoginWrite();
-Controller.getQnaController().requestQnaWrite();
+// Controller.getArticleController().requestArticleWrite();
+// Controller.getBoardController().requestBoardWrite();
+// Controller.getLoginController().requestLoginWrite();
+// Controller.getQnaController().requestQnaWrite();
 
 // router
 // request Main Page
@@ -53,10 +54,10 @@ app.all('/articleWrite', function(request, response){
   var title = request.param('title');
   var content = request.param('content');
   var writer = request.param('writer');
-  
+
   var article = new article_back(title, content, writer);
   var isSuccess = Controller.getArticleController().requestArticleWrite(article);
- 
+
   console.log('응답 데이터');
   response.send(isSuccess);
 
@@ -67,7 +68,7 @@ app.all('/articleList', function(request, response){
 
   console.log('/articleList 요청받음');
   var send_articles = Controller.getArticleController().requestArticleList();
-  
+
   response.send(send_articles);
 
 });
@@ -78,7 +79,7 @@ app.all('/articleRead', function(request, response){
   console.log('/articleRead 요청받음');
   var num = parseInt(request.param('num'));
   var send_article = Controller.getArticleController().requestArticleRead(num);
-  
+
   response.send(send_article);
 
 });
@@ -88,11 +89,11 @@ app.all('/articleSelectedDelete', function(request, response){
 
   console.log('/articleDelete 요청받음');
   var delete_nums = parseInt(request.param('nums'));
-  
+
   var isSuccess = Controller.getArticleController().requestArticleSelectedDelete(delete_nums);
-  
+
   response(isSuccess);
-  
+
 
 });
 
@@ -104,27 +105,27 @@ app.all('/articleUpdate', function(request, response){
   var title = request.param('title');
   var content = request.param('content');
   var writer = request.param('writer');
-  
+
   var article = new article_back(title, content, writer);
-  
+
   article.num = num;
-  
+
   var isSuccess = Controller.getArticleController().requestArticleUpdate(article);
-  
+
   console.log('응답 데이터');
   response.send(isSuccess);
-  
+
 });
 //article 삭제
 app.all('/articleDelete'), function(request, response) {
-	
+
 	console.log('/articleDelete 요청받음');
 	var num = parseInt(request.param('num'));
-	
+
 	var isSuccess = Controller.getArticleController().requestDelete(num);
-	
+
 	response.send(isSuccess);
-	
+
 }
 
 // board 글쓰기

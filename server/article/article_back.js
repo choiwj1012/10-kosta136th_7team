@@ -1,10 +1,10 @@
-var article_back = function(t, c, w){
+var article_back = function(title, content, writer){
 
-  // 변수 테스트 속성
+  // 변수
   this.number = 0;
-  this.title = t;
-  this.content = c;
-  this.writer = w;
+  this.title = title;
+  this.content = content;
+  this.writer = writer;
   this.readCount = 0;
 
 };

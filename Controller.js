@@ -1,7 +1,7 @@
-var articleController_back = require('./article/articleController_back');
-var boardController_back = require('./board/boardController_back');
-var loginController_back = require('./login/loginController_back');
-var qnaController_back = require('./qna/qnaController_back');
+var articleController_back = require('./server/article/articleController_back');
+var boardController_back = require('./server/board/boardController_back');
+var loginController_back = require('./server/login/loginController_back');
+var qnaController_back = require('./server/qna/qnaController_back');
 
 var Controller = function(){
 

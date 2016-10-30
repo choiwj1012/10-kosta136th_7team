@@ -22,14 +22,10 @@ create table articles (
 	title varchar(50) not null,
 	content varchar(300) not null,
 	writer varchar(50) not null,
-	readCount int not null default 0,
-	userNum int,
-	foreign key(userNum) references users(userNum)
+	readCount int not null default 0
     
 );
 
-insert into users values(1, 1, 1, 1, 1);
-insert into articles values(1, '1', '1', '1', 1, 1);
 
 select * from articles;
 select * from users;
