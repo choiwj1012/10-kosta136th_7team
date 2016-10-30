@@ -17,6 +17,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	
+	
 
 <!-- ListReturn btn 핸들링 -->
 <script>
@@ -60,6 +62,32 @@
 			var num = parseInt($('#num').val());
 			Controllers.getArticleController().requestDelete(num);
 	});
+</script>
+
+<!-- 글조회 이벤트 핸들링 -->
+<script type="text/javascript">
+
+	$(document).ready(function() {
+	
+	
+		var requestUrl = window.location.href; //주소 복사
+    	var requestQueryString = window.location.href.slice(requestUrl.indexOf('?') + 1); //requestUrl.indexOf('?') 시작  +1끝
+    	var requestParameters = requestQueryString.split('&'); //분해
+    
+    	var num = requestParameters[0].split('=')[1];
+    	var title = requestParameters[1].split('=')[1];
+    	var content = requestParameters[2].split('=')[1];
+    	var writer = requestParameters[3].split('=')[1];
+    	var readCount = requestParameters[4].split('=')[1];
+    
+    	$('#num').val(num);
+    	$('#title').val(title);
+    	$('#content').val(content);
+    	$('#writer').val(writer);
+    	$('#readCount').val(readCount);	    
+    
+});
+	
 </script>
 
 </head>

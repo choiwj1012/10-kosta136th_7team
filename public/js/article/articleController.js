@@ -83,7 +83,7 @@ function ArticleController() {
 			alert('글 삭제 실패');
 		}
 
-		document.location = 'selectAllView.html';
+		document.location = 'articleList.html';
 	};
 	
 	// 글삭제 controller 메서드
