@@ -32,8 +32,6 @@ function ArticleController() {
 
 var Controllers = function() {
 	
-	var ArticleController = articleController;
-	
 };
 
 Controllers.articleController = new ArticleController();
@@ -43,5 +41,3 @@ Controllers.getArticleController = function() {
 	return Controllers.articleController;
 	
 };
-
-module.exports = Controllers;
