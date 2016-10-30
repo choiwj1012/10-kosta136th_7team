@@ -19,6 +19,10 @@ body{font-family:'Orbitron','Nanum Gothic';}
   padding-top:80px;
 }
 
+.jumbotron p{
+color: #CCEEFF;
+}
+
 #loginBox{
   margin-bottom:200px;
 }
