@@ -10,10 +10,9 @@ img{border:none;}
 body{font-family:'Orbitron','Nanum Gothic';}
 
 /* Bootstrap jumbtron */
-
 .jumbotron{
   background-color: #000;
-  background-image: url(../img/Elcapitan.jpg);
+  background-image: url(../img/Elcapitan2.jpg);
   color: #fff;
   text-align:center;
   padding-top:80px;
@@ -23,14 +22,13 @@ body{font-family:'Orbitron','Nanum Gothic';}
 color: #CCEEFF;
 }
 
-#loginBox{
-  margin-bottom:200px;
-}
 
-#loginBox h2{
+#joinBox{
+  margin-bottom:50px;
+}
+#joinBox h2{
   margin-bottom:43px;
 }
-
 .btn-myButton{
   background-color: #000;
   color: #fff;
