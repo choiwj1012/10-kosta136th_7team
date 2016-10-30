@@ -1,10 +1,10 @@
-function articleController_back(){
+var articleController_back = function(){
 
-  this.test = function(){
+}
 
-    console.log("연결 테스트입니다");
+articleController_back.test = function(){
 
-  }
+  console.log("articleController 연결 테스트입니다");
 
 }
 
