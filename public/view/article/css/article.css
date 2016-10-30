@@ -47,7 +47,15 @@
 	color : #fff;
 }
 
-#writeview {
+#writetitle {
+	 opacity: 0.5;
+}
+
+#writecontent {
+	 opacity: 0.5;
+}
+
+#writewriter {
 	 opacity: 0.5;
 }
 
@@ -69,4 +77,30 @@
 
 #date_cancle_btn {
 	float : right;
+}
+
+.updatebody {
+	 background : url('../img/update.jpg') no-repeat;
+	 background-position : 50% 0px;
+	 background-attachment : fixed;
+ 	 background-size : 50%;
+ 	
+}
+
+.readbody {
+	 background : url('../img/read.jpg') no-repeat;
+	 background-position : 50% 0px;
+	 background-attachment : fixed;
+ 	 background-size : 50%;
+}
+#updatetitle{
+	opacity: 0.5;
+}
+
+#updatecontent{
+	opacity: 0.5;
+}
+
+#updatewriter{
+	opacity: 0.5;
 }
