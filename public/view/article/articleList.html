@@ -69,6 +69,19 @@
 
 </script>
 
+<!-- write btn 핸들링 -->
+<script>
+  	$(document).ready(function() {
+  		
+  		$('#delete_false_btn').click(function() {
+  			
+  			Controllers.getArticleController().requestListView();
+  			
+  		});
+  		
+  	});
+</script>
+
 <!-- 글목록 이벤트 핸들링 -->
 <script type="text/javascript">
 
@@ -131,7 +144,6 @@
 		<div class="jumbotron text-center" id="Listjumbotron">
 			<h1>Article List page</h1>
 			<p>자유로운 대화가 오가는 게시판</p>
-			<h1 class="title_td">테스트 테스트 테스트</h1>
 		</div>
 		<div class="container">
 

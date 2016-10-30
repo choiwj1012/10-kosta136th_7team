@@ -51,6 +51,26 @@ function ArticleController() {
 		document.location = 'articleUpload.html';
 
 	}
+	
+	// 글조회 view Controller 메서드
+	this.requestReadView = function() {
+
+		document.location = 'articleRead.html';
+
+	}
+	
+	// 글수정 controller 메서드
+	this.requestUpdate = function(article) {
+
+		var isSuccess = dao.updateDao(article);
+
+		if (isSuccess === true) {
+			alert('글  수정 성공');
+		} else {
+			alert('글 수정 실패');
+		}
+		return isSuccess;
+	};
 
 	// 글선택 삭제 controller 메서드
 	this.requestSelectDelete = function(delete_nums) {
@@ -64,6 +84,21 @@ function ArticleController() {
 		}
 
 		document.location = 'selectAllView.html';
+	};
+	
+	// 글삭제 controller 메서드
+	this.requestDelete = function(num) {
+
+		var isSuccess = dao.deleteDao(num);
+
+		if (isSuccess === true) {
+			alert('글 삭제 성공');
+		} else {
+			alert('글 삭제 실패');
+		}
+
+		document.location = 'selectAllView.html';
+
 	};
 
 }
