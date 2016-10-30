@@ -28,19 +28,37 @@ body {
 
 /* Bootstrap jumbtron */
 
-header{
+/*header{
 
-
+  width: 100%
+  height: 100%
    margin:auto;
    min-height: 200px;
-   max-height: 600px;
- text-align: center;
+   max-height: 700px;
+   min-width: 200px;
+   text-align: center;
+}*/
 
- background-position: center;
-  background-image: url(../img/sierra.jpg);
+.jumbotron{
 
+  margin: 0px;
+  padding: 0px;
+  background-position: center;
+  background-size : cover;
+  background-image: url(../img/sierra.jpg) ;  /*no-repeat : 격자무늬 없애기*/
 }
 
+.jumbotron h1{
+color: #FFF;
+}
+
+.jumbotron p{
+color: #FFF;
+}
+
+.submit{
+  color: #FFF
+}
 
 eader .header-content {
     padding: 100px 15px
