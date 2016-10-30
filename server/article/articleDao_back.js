@@ -1,3 +1,14 @@
+var mysql = require('mysql');
+
+// connect mysql DB
+var db = mysql.createConnection({
+  host : 'localhost',
+  port : 3306,
+  user : 'root',
+  password : '123456',
+  database : 'articledb'
+});
+
 var articleDao_back = function(){
 
 };

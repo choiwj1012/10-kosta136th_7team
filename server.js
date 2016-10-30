@@ -3,19 +3,19 @@
 // extract modules
 var http = require('http');
 var express = require('express');
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var Controller = require('./Controller');
 var article_back = require('./server/article/article_back');
 
 
-// connect mysql DB
-var db = mysql.createConnection({
-  host : 'localhost',
-  port : 3306,
-  user : 'root',
-  password : '123456',
-  database : 'articledb'
-});
+// // connect mysql DB
+// var db = mysql.createConnection({
+//   host : 'localhost',
+//   port : 3306,
+//   user : 'root',
+//   password : '123456',
+//   database : 'articledb'
+// });
 
 // setup express
 var app = express();
@@ -198,5 +198,3 @@ app.all('/signup', function(request, response){
   console.log('/signup 요청받음');
 
 });
-
-module.exports = db;
