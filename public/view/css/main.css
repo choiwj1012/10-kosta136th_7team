@@ -1,11 +1,8 @@
 @charset "UTF-8";
 
-/* font */
-@import 'https://fonts.googleapis.com/css?family=Permanent+Marker';
-
 .carousel-inner img{
-  width:100%;
-  margin:auto;
+  width : 100%;
+  margin : auto;
   min-height: 200px;
   max-height: 600px;
 }

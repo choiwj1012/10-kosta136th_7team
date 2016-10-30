@@ -10,9 +10,9 @@
 
 /* logo style */
 #logo{
-  font-family : 'Permanent Marker', cursive;
-  font-size : 30px;
-  color: #fff;
+  font-family: 'Permanent Marker', cursive;
+  font-size:30px;
+  color:white;
   margin: 0 auto;
 }
 
@@ -28,6 +28,6 @@
 #footer {
     background-color: #000;
     color: #4BF;
-    padding: 20px 0;
+    padding: 25px;
     margin-top:100px;
 }
