@@ -48,7 +48,7 @@ body {
   background-image: url(../img/sierra.jpg) ;  /*no-repeat : 격자무늬 없애기*/
 }
 
-.jumbotron h1{
+#title_name{
 color: #FFF;
 }
 
@@ -58,6 +58,10 @@ color: #FFF;
 
 .submit{
   color: #FFF
+}
+
+.title_td {
+   color: #5AF;
 }
 
 eader .header-content {
