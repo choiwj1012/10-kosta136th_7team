@@ -1,7 +1,7 @@
 //board domain 객체 생성
-function Article(title, content, writer) {
+function Board(title, content, writer) {
 
-   this.num = o;
+   this.num = 0;
    this.title = title;
    this.content = content;
    this.writer = writer;

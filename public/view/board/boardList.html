@@ -51,43 +51,44 @@
 
    <!-- 체크박스 전체 선택 이벤트 핸들링 -->
    <script>
-   $(document).ready(function() {
+      $(document).ready(function() {
 
-      $('#all_check').click(function(){
+         $('#all_check').click(function() {
 
-         var trs = $('tbody').children();
+            var trs = $('tbody').children();
 
-         if (this.checked) {
-            for(var i = 0 ; i < trs.length ; i++) {
-               trs.eq(i).children().first().children().prop('checked', true);
-            }
+            if (this.checked) {
+               for (var i = 0; i < trs.length; i++) {
+                  trs.eq(i).children().first().children().prop('checked', true);
+               }
             } else {
-            for(var i = 0 ; i < trs.length ; i++) {
-               trs.eq(i).children().first().children().prop('checked', false);
+               for (var i = 0; i < trs.length; i++) {
+                  trs.eq(i).children().first().children().prop('checked', false);
+               }
             }
-            }
+
+         });
 
       });
-
-   });
    </script>
 
    <!-- 선택 삭제 이벤트 핸들링 -->
    <script>
       $(document).ready(function() {
 
-         $('#selected_delete_button').click(function() {
+         $('#delete_btn').click(function() {
 
             var delete_nums = []; //식제할 번호의 배열
             var trs = $('tbody').children();
 
             for (var i = 0; i < trs.length; i++) {
 
+               //prop(속성)이 checked 된놈들만 찾아
                var checked = trs.eq(i).children().first().children().prop('checked');
 
                if (checked) {
                   var num = trs.eq(i).children().eq(1).text();
-                  delete_nums.push(num);
+                  delete_nums.push(num); //delete_nums 배열에 선택된 글의 번호를 저장
                   //여기서는 break 하면 안되지요.
                   //여러개를 체크해서 삭제할 수도 있으니 또 체크된 것이 없나 나머지도 검색해 봐야 겠지요.
                }
@@ -194,34 +195,7 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr>
-                     <td><input type="checkbox"></td>
-                     <td>1</td>
-                     <td class="title_td">첫글임당</td>
-                     <td>박성용</td>
-                     <td>102</td>
-                  </tr>
-                  <tr>
-                     <td><input type="checkbox"></td>
-                     <td>2</td>
-                     <td class="title_td">두 번째 글임당</td>
-                     <td>조현우</td>
-                     <td>102</td>
-                  </tr>
-                  <tr>
-                     <td><input type="checkbox"></td>
-                     <td>3</td>
-                     <td class="title_td">세 번째 글임당</td>
-                     <td>박성용</td>
-                     <td>102</td>
-                  </tr>
-                  <tr>
-                     <td><input type="checkbox"></td>
-                     <td>4</td>
-                     <td class="title_td">네 번째 글임당</td>
-                     <td>김권식</td>
-                     <td>102</td>
-                  </tr>
+
                </tbody>
             </table>
 
@@ -232,7 +206,7 @@
 
             <div class="row">
                <div class="col-sm-6">
-                  <button class="btn btn-danger" type="submit" id="delete_btn">선택한 글삭제</a></button>
+                  <button class="btn btn-danger" type="submit" id="delete_btn">선택 글삭제</a></button>
                </div>
                <div class="col-sm-6" align="right">
 
@@ -275,12 +249,13 @@
                         </li>
                      </ul>
                </div>
+
                <div class="col-sm-4">
                   <input type="text" class="form-control text-left" size="50" placeholder="찾으시는 글 또는 작성자를 입력해주세요." required>
                </div>
-               <div class="col-sm-4 suchedbutton">
-                  <a href="#" class="btn btn-default btn-lg pull-left">
-                     <span class="glyphicon glyphicon-search"></span> 찾기
+               <div class="col-sm-4 suchedbutton" >
+                  <a href="#" class="btn btn-default btn-lg pull-left" id="search_btn">
+                     <span class="glyphicon glyphicon-search"> 찾기</span>
                   </a>
                   </form>
                </div>
@@ -342,37 +317,6 @@
          a.src = g;
          m.parentNode.insertBefore(a, m)
       })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-=======
-      </div>
-  </section>
-
-  <!-- footer -->
-  <footer id="footer" class="container-fluid text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2">
-          <h2>BitCoin</h2>
-        </div>
-        <div class="col-sm-8">
-          <p>가산디지털단지역 KOSTA 사무실 || 고객상담실 : 080 - 000 - 0000 || 대표이사 : 박성용</p>
-          <p>통신판매업 신고번호 서울-11111호</p>
-          <p>Copyright &copy; 2016 psy Co., ltd ALL RIGHTS RESERVED</p>
-        </div>
-        <div class="col-sm-2">
-          <h4>Category</h4>
-          <ul>
-            <li><a href="boardList.html">board</a></li>
-            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
-            <li><a href="../article/articleList.html">Article</a></li>
-            <li><a href="../qna/qnaList.html">QnA</a></li>
-            <li><a href="../login/signup.html">SignUp</a></li>
-            <li><a href="../login/login.html">Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
->>>>>>> f927abadc59028c88bc56bdecd4a9e5d3eacb2d9
 
       ga('create', 'UA-86493020-1', 'auto');
       ga('send', 'pageview');
