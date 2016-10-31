@@ -3,8 +3,8 @@
 // extract modules
 var http = require('http');
 var express = require('express');
-//var mysql = require('mysql');
-var Controller = require('./Controller');
+var mysql = require('mysql');
+var Controller = require('./server/Controller');
 var article_back = require('./server/article/article_back');
 
 

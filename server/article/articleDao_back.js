@@ -5,7 +5,7 @@ var db = mysql.createConnection({
   host : 'localhost',
   port : 3306,
   user : 'root',
-  password : '123456',
+  password : 'knight85',
   database : 'articledb'
 });
 
@@ -57,39 +57,42 @@ articleDao_back.saveDao = function(article) {
 
 };
 
-// 글리스트 method
+// 글목록 dao method
 articleDao_back.listDao = function() {
 
-	var send_articles;
+  var send_articles;
 
 	try {
 
 		var sql = 'select * from articles';
 
-		listQuery(sql, function(result) {
+    selectAllQuery(sql, function(result){
 
-			send_articles = result;
+      send_articles = result;
 
-		});
+    });
 
-		function listQuery(sql, callback) {
+    function selectAllQuery(sql, callback){
 
-			db.query(sql, function(error, result) {
+      db.query(sql, function(error, result){
+        console.log(send_articles);
+        send_articles = result;
+        console.log(send_articles);
+      });
 
-			});
+      callback({send_articles});
 
-			callback({ send_articles });
-
-		}
+    }
 
 	} catch (e) {
 
 		console.log('ArticleDao 객체 : listDao 메서드에서 예외 발생');
-
-		send_articles = { undefined };
+    console.log(e.message);
+		send_articles = undefined;
 
 	}
 
+  console.log(send_articles);
   return send_articles;
 
 };
