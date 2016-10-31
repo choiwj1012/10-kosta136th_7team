@@ -75,7 +75,9 @@ articleDao_back.listDao = function() {
     function selectAllQuery(sql, callback){
 
       db.query(sql, function(error, result){
+        console.log(send_articles);
         send_articles = result;
+        console.log(send_articles);
       });
 
       callback({send_articles});
